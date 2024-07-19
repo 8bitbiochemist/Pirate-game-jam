@@ -1,24 +1,36 @@
 [gd_scene load_steps=3 format=3 uid="uid://ba3mcjrdo8535"]
 
 [ext_resource type="Texture2D" uid="uid://w3ommfrid7xm" path="res://good_guy.png" id="1_3dfn1"]
-[ext_resource type="Script" path="res://movement.gd" id="2_5i5xd"]
+[ext_resource type="Script" path="res://player.gd" id="1_kqlgk"]
 
-[node name="Node2D" type="Node2D"]
+[node name="game" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Melee enemigo" type="Sprite2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_kqlgk")
+speed = null
+
+[node name="Protag" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(596, 320)
 scale = Vector2(3.836, 3.613)
 texture = ExtResource("1_3dfn1")
-script = ExtResource("2_5i5xd")
 
-[node name="Testing Attacks" type="Label" parent="Sprite2D"]
-offset_left = -18.7696
-offset_top = -40.9632
-offset_right = 21.2304
-offset_bottom = -17.9632
-text = "[test]"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
 position = Vector2(598, 317.5)
 scale = Vector2(3.55469, 3.53516)
 polygon = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
+
+[node name="Testing Attacks" type="Label" parent="CharacterBody2D"]
+offset_left = 524.0
+offset_top = 172.0
+offset_right = 565.0
+offset_bottom = 195.0
+text = "[test]"
+
+[node name="Spells" type="Label" parent="CharacterBody2D"]
+offset_left = 482.0
+offset_top = 288.0
+offset_right = 522.0
+offset_bottom = 311.0
+text = "[text]"

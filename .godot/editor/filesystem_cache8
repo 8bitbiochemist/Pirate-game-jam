@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721403214
+::res://::1721425934
 good_guy.png::CompressedTexture2D::1602829243363447826::1721337589::1721337644::1::::<><>::
 icon.svg::CompressedTexture2D::4546494576053504284::1721239701::1721239709::1::::<><>::
-movement.gd::GDScript::-1::1721401532::0::1::::<>Sprite2D<>::
-node_2d.tscn::PackedScene::2444955935435956182::1721401779::0::1::::<><>::uid://w3ommfrid7xm::::res://good_guy.png<>res://movement.gd
+node_2d.tscn::PackedScene::2444955935435956182::1721425512::0::1::::<><>::uid://w3ommfrid7xm::::res://good_guy.png<>res://player.gd
 placeholder.png::CompressedTexture2D::4080159049727377859::1721323352::1721323354::1::::<><>::
+player.gd::GDScript::-1::1721425461::0::1::::<>CharacterBody2D<>::
+README.md::TextFile::-1::1721404388::0::1::::<><>::
