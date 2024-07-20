@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://xqlhdok8j6on"]
+
+[ext_resource type="Texture2D" uid="uid://b51mdpicor1am" path="res://Sprites/icon.svg" id="1_t4bp7"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_ux55x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btvnk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gxpud"]
+radius = 54.0093
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_ux55x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_btvnk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.84217e-14, -0.249999)
+scale = Vector2(0.15625, 0.152344)
+texture = ExtResource("1_t4bp7")
+
+[node name="Detection" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource("CircleShape2D_gxpud")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
