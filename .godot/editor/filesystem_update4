@@ -1,9 +1,4 @@
-res://node_2d.tscn
-res://player.gd
-res://Enemy.tscn
-res://Enemy.gd
+res://Scenes/Game.tscn
 res://Scenes/Enemy.tscn
 res://Scenes/player.tscn
-res://Scenes/Game.tscn
 res://Scripts/Enemy.gd
-res://Scripts/player.gd

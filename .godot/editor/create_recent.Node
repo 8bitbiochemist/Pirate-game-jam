@@ -1,4 +1,6 @@
 NavigationRegion2D
+Timer
+NavigationLink2D
 TileMap
 NavigationAgent2D
 Label

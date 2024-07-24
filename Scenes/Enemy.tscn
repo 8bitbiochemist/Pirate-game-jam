@@ -11,6 +11,8 @@ radius = 54.0093
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 2
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_ux55x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,8 +24,7 @@ scale = Vector2(0.15625, 0.152344)
 texture = ExtResource("1_t4bp7")
 
 [node name="Detection" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
 shape = SubResource("CircleShape2D_gxpud")
