@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dogep0an8i3ia"]
+
+[ext_resource type="Script" path="res://Scenes/dagger.gd" id="1_s0wn8"]
+
+[node name="dagger" type="Node2D"]
+script = ExtResource("1_s0wn8")

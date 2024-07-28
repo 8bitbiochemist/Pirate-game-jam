@@ -2,3 +2,9 @@ res://Scenes/Game.tscn
 res://Scenes/Enemy.tscn
 res://Scenes/player.tscn
 res://Scripts/Enemy.gd
+res://Scenes/health_component.tscn
+res://Scenes/health_component.gd
+res://Scripts/health_component.gd
+res://Scenes/weapon_stats.tscn
+res://Scenes/dagger.tscn
+res://Scenes/dagger.gd

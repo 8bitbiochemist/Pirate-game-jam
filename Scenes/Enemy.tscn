@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://xqlhdok8j6on"]
+[gd_scene load_steps=6 format=3 uid="uid://xqlhdok8j6on"]
 
 [ext_resource type="Texture2D" uid="uid://b51mdpicor1am" path="res://Sprites/icon.svg" id="1_t4bp7"]
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_ux55x"]
+[ext_resource type="PackedScene" uid="uid://cxjh31ymand0n" path="res://Scenes/health_component.tscn" id="3_8ho3x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btvnk"]
 
@@ -9,6 +10,7 @@
 radius = 54.0093
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(219, 119)
 collision_layer = 2
 collision_mask = 2
 motion_mode = 1
@@ -29,8 +31,8 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
 shape = SubResource("CircleShape2D_gxpud")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-debug_enabled = true
+[node name="Health Component" parent="." instance=ExtResource("3_8ho3x")]
+position = Vector2(-29, -1)
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
