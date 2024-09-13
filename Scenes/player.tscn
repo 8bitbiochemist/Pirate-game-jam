@@ -30,3 +30,5 @@ offset_top = -9.0
 offset_right = -17.0
 offset_bottom = 14.0
 text = "[text]"
+
+[node name="Marker2D" type="Marker2D" parent="."]

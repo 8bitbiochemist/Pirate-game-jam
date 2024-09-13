@@ -3,7 +3,6 @@ extends Node2D
 const MAX_HEALTH = 5
 var current_health = MAX_HEALTH
 
-
 func _ready():
 	update_health_ui()
 	$health_bar.max_value = MAX_HEALTH
@@ -23,3 +22,7 @@ func damage():
 	if current_health <= 0:
 		current_health = MAX_HEALTH
 	update_health_ui()
+
+
+
+		

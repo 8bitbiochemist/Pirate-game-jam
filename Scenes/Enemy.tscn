@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://xqlhdok8j6on"]
+[gd_scene load_steps=7 format=3 uid="uid://xqlhdok8j6on"]
 
 [ext_resource type="Texture2D" uid="uid://b51mdpicor1am" path="res://Sprites/icon.svg" id="1_t4bp7"]
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_ux55x"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gxpud"]
 radius = 54.0093
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_werso"]
+radius = 14.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(219, 119)
@@ -34,5 +37,13 @@ shape = SubResource("CircleShape2D_gxpud")
 [node name="Health Component" parent="." instance=ExtResource("3_8ho3x")]
 position = Vector2(-29, -1)
 
+[node name="Hurbox" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurbox"]
+shape = SubResource("CircleShape2D_werso")
+debug_color = Color(0.976765, 0.0998552, 0.294739, 0.42)
+
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
+[connection signal="area_entered" from="Hurbox" to="." method="_on_hurbox_area_entered"]
